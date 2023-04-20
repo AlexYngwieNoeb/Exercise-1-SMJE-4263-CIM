@@ -1,0 +1,21 @@
+import bpy
+
+box_scales = [(1.2, 1.2, 1.2), (2.2, 2.2, 2.2), (3.2, 3.2, 3.2)]
+lid_scales = [(1.2, 1.2, 0.5), (2.2, 2.2, 0.5), (3.2, 3.2, 0.5)]
+locations = [(4, 0, 0), (1, 0, 0), (-4, 0, 0)]
+lid_locations = [(4, 0, 1), (1, 0, 1), (-4, 0, 1)]
+names = ["Box1", "Box2", "Box3", "Lid1", "Lid2", "Lid3"]
+
+for i, scales in enumerate(box_scales):
+    bpy.ops.mesh.primitive_cube_add()
+    box = bpy.context.active_object
+    box.location = locations[i]
+    box.scale = scales
+    box.name = names[i]
+
+for i, scales in enumerate(lid_scales):
+    bpy.ops.mesh.primitive_cube_add()
+    lid = bpy.context.active_object
+    lid.location = lid_locations[i]
+    lid.scale = scales
+    lid.name = names[i+3]
