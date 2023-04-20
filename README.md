@@ -1,2 +1,1 @@
-# Exercise-1-SMJE-4263-CIM
-Exercise 1 SMJE 4263 CIM
+A Python script can be employed in Blender to create diverse scenes with intricate objects quickly and effectively by generating numerous random boxes. Each box's dimensions, position, and rotation are determined by random values produced by the script, and a mesh object is generated based on these values. This method is advantageous in generating diverse and lifelike scenes and can be combined with other Blender functions such as physics simulations, lighting, and materials. Engineers and designers who work with Blender can benefit from utilizing a Python script to automate the creation of numerous random objects as it is a potent tool.
