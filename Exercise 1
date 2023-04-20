@@ -1,0 +1,23 @@
+import bpy 
+bpy.ops.mesh.primitive_cube_add(size=1.2) 
+box1 = bpy.context.active_object 
+box1.scale = (1.2, 1.2, 1.2) 
+box1_location = (4, 0, 0) 
+box1.location = box1_location
+bpy.ops.mesh.primitive_cube_add(size=2) 
+lid1 = bpy.context.active_object 
+lid1.scale = (1.2, 1.2, 0.5)
+lid1_location = (4, 0, 1) 
+lid1.location = lid1_location
+
+The above code is to create only a single box. To create multiple box, we duplicated the code 2 times and adjust the location and scale of the box. Hence we could get 3 bimport bpy - Imports the Blender Python module.
+bpy.ops.mesh.primitive_cube_add(size=1)
+box1 = bpy.context.active_object
+box1.scale = (1.2, 1.2, 1.2) 
+box1_location = (4, 0, 0) 
+box1.location = box1_location 
+bpy.ops.mesh.primitive_cube_add(size=1) 
+lid1 = bpy.context.active_object 
+lid1.scale = (1.2, 1.2, 0.5) 
+lid1_location = (4, 0, 1) 
+lid1.location = lid1_location 
